@@ -16,15 +16,25 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Firebase の設定
 
-### プロジェクト設定
-
 プロジェクト作成後の FirebaseSDK の環境キーをメモっておく
 
-↓
-
-.env.example のように.env ファイルを作成
-
 Authentication 選択後、プロバイダにメール/パスワードを追加
+
+### プロジェクト設定
+
+先程メモっておいた環境キーを
+
+.env.example のように.env ファイル作成し、貼り付け
+
+```
+NEXTAUTH_SECRET
+```
+は
+```
+openssl rand -base64 32
+```
+コマンドを叩いてランダムな値を取得して貼り付ける
+
 
 詳細は
 [https://qiita.com/masakiwakabayashi/items/741998ed5b830d8f3707]
