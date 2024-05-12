@@ -19,7 +19,9 @@ Open [http://localhost:3000](http://localhost:3000)
 ### プロジェクト設定
 
 プロジェクト作成後の FirebaseSDK の環境キーをメモっておく
+
 ↓
+
 .env.sample のように.env ファイルを作成
 
 Authentication 選択後、プロバイダにメール/パスワードを追加
