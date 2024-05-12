@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ↓
 
-.env.exsample のように.env ファイルを作成
+.env.example のように.env ファイルを作成
 
 Authentication 選択後、プロバイダにメール/パスワードを追加
 
