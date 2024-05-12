@@ -1,3 +1,5 @@
+# firebase 認証のサンプル
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -5,32 +7,36 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+make i #必要パッケージをインストールする
+
+make d #dev環境起動
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Firebase の設定
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### プロジェクト設定
 
-## Learn More
+プロジェクト作成後の FirebaseSDK の環境キーをメモっておく
+↓
+.env.sample のように.env ファイルを作成
 
-To learn more about Next.js, take a look at the following resources:
+Authentication 選択後、プロバイダにメール/パスワードを追加
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+詳細は
+[https://qiita.com/masakiwakabayashi/items/741998ed5b830d8f3707]
+の "Firebase の設定"を参照
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Admin SDK の追加
 
-## Deploy on Vercel
+プロジェクトの設定 → サービスアカウント →Firebase Admin SDK
+から新しい秘密鍵を作成し、名称を
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+firebaseSecretKey.json
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+に変更し、ルートディレクトリ直下にぶち込む。
+
+これで動かなければ教えて下さい！
