@@ -20,6 +20,13 @@ Open [http://localhost:3000](http://localhost:3000)
 
 Authentication 選択後、プロバイダにメール/パスワードを追加
 
+詳細は
+[https://qiita.com/masakiwakabayashi/items/741998ed5b830d8f3707]
+の "Firebase の設定"を参照
+
+
+
+
 ### プロジェクト設定
 
 先程メモっておいた環境キーを
@@ -36,9 +43,7 @@ openssl rand -base64 32
 コマンドを叩いてランダムな値を取得して貼り付ける
 
 
-詳細は
-[https://qiita.com/masakiwakabayashi/items/741998ed5b830d8f3707]
-の "Firebase の設定"を参照
+
 
 ### Admin SDK の追加
 
