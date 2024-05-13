@@ -6,8 +6,12 @@ import SignOutButton from '@/components/SignOutButton';
 const Home = async () => {
   return (
     <main>
-      <ClientComponent />
       <h1>Home</h1>
+
+      <h2>ClientComponent</h2>
+      <ClientComponent />
+
+      <h2>ServerComponent</h2>
       <ServerComponent />
 
       <SignOutButton />
