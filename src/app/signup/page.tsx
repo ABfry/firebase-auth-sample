@@ -1,29 +1,38 @@
 'use client';
-
+import React from 'react';
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  updateProfile,
+} from 'firebase/auth';
 import auth from '../../firebase/client';
-import { signIn as signInByNextAuth } from 'next-auth/react';
-
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-const SingIn = () => {
+const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const signIn = async () => {
+  const router = useRouter();
+
+  const signUp = async () => {
     if (!email) return;
     if (!password) return;
 
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const idToken = await userCredential.user.getIdToken();
-      await signInByNextAuth('credentials', {
-        idToken,
-        callbackUrl: '/',
+
+      updateProfile(userCredential.user, {
+        displayName: 'test',
       });
+
+      await sendEmailVerification(userCredential.user);
+
+      router.push('/signin');
+      alert('ユーザ登録が完了しました');
     } catch (e) {
-      alert('ログインに失敗しました');
       console.error(e);
     }
   };
@@ -45,15 +54,15 @@ const SingIn = () => {
       <button
         type='button'
         onClick={() => {
-          signIn();
+          signUp();
         }}
       >
-        ログイン
+        ユーザ登録
       </button>
 
-      <Link href='/signup'>新規登録はこちら</Link>
+      <Link href='/signin'>ユーザー登録済みの方はこちら</Link>
     </div>
   );
 };
 
-export default SingIn;
+export default SignUp;
