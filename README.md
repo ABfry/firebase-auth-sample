@@ -54,4 +54,4 @@ openssl rand -base64 32
 firebaseSecretKey.json
 ```
 
-に変更し、ルートディレクトリ直下にぶち込む。
+に変更し、ルートディレクトリ直下にぶち込む
