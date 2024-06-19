@@ -2,6 +2,9 @@ import ClientComponent from '@/components/ClientComponent';
 import ServerComponent from '@/components/ServerComponent';
 
 import SignOutButton from '@/components/SignOutButton';
+import UserContent from '@/components/UserContent';
+
+import Line from '@/components/ui/line';
 
 const Home = async () => {
   return (
@@ -18,7 +21,12 @@ const Home = async () => {
         <ServerComponent />
       </div>
 
-      <SignOutButton className='w-fit block mx-auto' />
+      <SignOutButton className='w-fit block mx-auto'>SignOut</SignOutButton>
+
+      <Line />
+
+      <h2 className='text-center font-bold text-2xl'>セッション情報</h2>
+      <UserContent />
     </main>
   );
 };

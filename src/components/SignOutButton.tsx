@@ -1,23 +1,25 @@
 'use client';
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
 import { signOut, useSession } from 'next-auth/react';
 import { Button } from './ui/button';
+import { twMerge } from 'tailwind-merge';
 
-type style = {
+interface SignOutButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
   className: string;
-};
+}
 
-const SignOutButton = (style: style) => {
+const SignOutButton = ({ children, className, ...props }: SignOutButtonProps) => {
   return (
     <Button
       type='button'
       onClick={async () => {
         await signOut();
       }}
-      className={`${style.className}`}
+      className={twMerge('', className)}
     >
-      SignOut
+      {children}
     </Button>
   );
 };
