@@ -21,7 +21,7 @@ const Home = async () => {
         <ServerComponent />
       </div>
 
-      <SignOutButton className='w-fit block mx-auto' />
+      <SignOutButton className='w-fit block mx-auto'>SignOut</SignOutButton>
 
       <Line />
 
