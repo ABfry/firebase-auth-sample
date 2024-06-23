@@ -4,10 +4,15 @@
 
 ログイン画面
 
+![スクリーンショット 2024-06-23 15 46 20](https://github.com/ABfry/firebase-auth-sample/assets/88941921/9b8d390f-6e44-48d1-853a-bb15d54ce559)
+
 ---
 
 ログインに成功すると E-mail や ID などのセッション情報が表示される
 このまま iframe などの埋め込みに使用可
+
+![スクリーンショット 2024-06-23 15 44 54](https://github.com/ABfry/firebase-auth-sample/assets/88941921/6e0e8255-946d-4b49-82b4-4c6d57c757a1)
+
 
 id などの情報は firebase で管理される
 
