@@ -18,6 +18,7 @@ const SignOutButton = ({ children, className, ...props }: SignOutButtonProps) =>
         await signOut();
       }}
       className={twMerge('', className)}
+      {...props}
     >
       {children}
     </Button>

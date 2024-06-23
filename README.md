@@ -1,10 +1,22 @@
 # firebase 認証のサンプル
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 使用例
 
-## Getting Started
+ログイン画面
 
-First, run the development server:
+![スクリーンショット 2024-06-23 15 46 20](https://github.com/ABfry/firebase-auth-sample/assets/88941921/9b8d390f-6e44-48d1-853a-bb15d54ce559)
+
+---
+
+ログインに成功すると E-mail や ID などのセッション情報が表示される
+このまま iframe などの埋め込みに使用可
+
+![スクリーンショット 2024-06-23 15 44 54](https://github.com/ABfry/firebase-auth-sample/assets/88941921/6e0e8255-946d-4b49-82b4-4c6d57c757a1)
+
+
+id などの情報は firebase で管理される
+
+## つかいかた
 
 ```bash
 make i #必要パッケージをインストールする
@@ -24,9 +36,6 @@ Authentication 選択後、プロバイダにメール/パスワードを追加
 [https://qiita.com/masakiwakabayashi/items/741998ed5b830d8f3707]
 の "Firebase の設定"を参照
 
-
-
-
 ### プロジェクト設定
 
 先程メモっておいた環境キーを
@@ -36,14 +45,14 @@ Authentication 選択後、プロバイダにメール/パスワードを追加
 ```
 NEXTAUTH_SECRET
 ```
+
 は
+
 ```
 openssl rand -base64 32
 ```
+
 コマンドを叩いてランダムな値を取得して貼り付ける
-
-
-
 
 ### Admin SDK の追加
 
